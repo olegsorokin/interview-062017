@@ -1,0 +1,47 @@
+.top-nav
+	text-align: right
+
+.top-nav__list
+	display: inline-block
+	text-align: center
+	+clearfix
+	li
+		float: left
+		padding-right: .5rem
+
+.top-nav__link
+	display: block
+	font-size: 1rem
+	font-weight: 700
+	text-decoration: none
+	padding: 0 1rem
+	line-height: 3.4rem
+	background-color: rgb(205, 205, 205)
+	background-image: radial-gradient(center top,rgb(165, 165, 165) 0%,rgb(205, 205, 205) 100%)
+	border-top-left-radius: 8px
+	border-top-right-radius: 8px
+	position: relative
+	transform: translateY(2px)
+	transition: transform 0.15s ease-out
+	&::before
+		outline: none
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 1.6rem
+		border-bottom-left-radius: 8px
+		border-bottom-right-radius: 8px
+		background-color: rgba(255, 255, 255, .5)
+	span
+		position: relative
+		z-index: 1
+	&--active
+		background-color: rgb(160, 210, 250)
+		background-image: radial-gradient(center top,rgb(100, 180, 245) 0%,rgb(160, 210, 250) 100%)
+	&:active
+		background-image: radial-gradient(center top,rgb(100, 180, 245) 0%,rgb(160, 210, 250) 100%)
+
+.top-nav__link:not(.top-nav__link--active):hover
+	transform: translateY(-1px)
