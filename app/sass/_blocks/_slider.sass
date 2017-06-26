@@ -1,0 +1,39 @@
+.slider
+	padding: 21px 0
+	box-sizing: border-box
+	min-height: 140px
+	background: url(../../img/bg-film.jpg) repeat-x top, #000 url(../../img/bg-film.jpg) repeat-x bottom
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		right: 0
+		bottom: 100%
+		left: 0
+		height: 3px
+		background-color: #ccc
+
+.slider__list
+	overflow: hidden
+	white-space: nowrap
+	font-size: 0
+
+.slider__item
+	display: inline-block
+	overflow: hidden
+	position: relative
+	span
+		font-size: 2rem
+		position: absolute
+		color: #fff
+		top: .5rem
+		left: 1.5rem
+		font-weight: 700
+
+.slider__img
+	display: block
+	object-fit: cover
+	border-radius: 2px
+	width: 142px
+	height: 98px
+	margin: 0 7px
