@@ -4,6 +4,7 @@
 	min-height: 140px
 	background: url(../../img/bg-film.jpg) repeat-x top, #000 url(../../img/bg-film.jpg) repeat-x bottom
 	position: relative
+	overflow: hidden
 	&::before
 		content: ''
 		position: absolute
@@ -37,3 +38,22 @@
 	width: 142px
 	height: 98px
 	margin: 0 7px
+
+.slider__links-wrap
+	position: absolute
+	top: 22px
+	right: -1rem
+	border-top-left-radius: .8rem
+	border-bottom-left-radius: .8rem
+	padding: 0 .6rem
+	background-color: #fff
+	box-shadow: -2px 2px 0 0 #000
+	z-index: 3
+	color: #c00
+	line-height: 2
+
+.slider__link
+	font-weight: 700
+	text-decoration: none
+	display: inline-block
+	margin: 0 .8rem
