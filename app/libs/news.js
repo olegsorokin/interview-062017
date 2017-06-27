@@ -6,11 +6,11 @@ const truncate = (str, size = 50, postf = '...') => {
 };
 
 const request = new XMLHttpRequest();
-
 request.open('GET', '/data/news/news.json', true);
 
 request.onload = () => {
   if (request.status >= 200 && request.status < 400) {
+
     const data = JSON.parse(request.responseText);
     const newsList = document.getElementById('news__list');
 
@@ -51,9 +51,7 @@ request.onload = () => {
         }
       });
     });
-  } else {
-    console.log('server error: ', request.status);
-  }
+  } else console.log('server error: ', request.status);
 };
 
 request.onerror = () => console.log('loading error');

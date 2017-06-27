@@ -1,11 +1,14 @@
-const sliderItems = document.getElementsByClassName('slider__item');
-const sliderLength = sliderItems.length;
-const sliderImg = document.getElementsByClassName('slider__img')[0];
-
+const getClass = indexClass => document.getElementsByClassName(indexClass);
+const getId = indexId => document.getElementById(indexId);
 const getMargin = (element, margin) => Number(window.getComputedStyle(element).getPropertyValue(margin).match(/\d+/)[0]);
+
+const sliderItems = getClass('slider__item');
+const sliderLength = sliderItems.length;
+const sliderImg = getClass('slider__img')[0];
+
 const slideWidth = sliderImg.width + getMargin(sliderImg, 'margin-left') + getMargin(sliderImg, 'margin-right');
 
-const insert = (first, last) => document.getElementById('slider__body').insertBefore(first, last);
+const insert = (first, last) => getId('slider__body').insertBefore(first, last);
 
 let margin = 0;
 
