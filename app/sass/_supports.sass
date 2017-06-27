@@ -1,0 +1,21 @@
+@supports (display: flex)
+	body
+		display: flex
+		flex-direction: column
+		padding-bottom: 0
+
+	.page-main
+		flex-grow: 1
+		display: flex
+		.container
+			display: flex
+
+	.page-footer
+		position: static
+
+@supports (transform: translate3d(0, 2px, 0))
+	.top-nav__link
+		transform: translate3d(0, 2px, 0)
+
+	.top-nav__link:not(.top-nav__link--active):hover
+		transform: translate3d(0, -1px, 0)
