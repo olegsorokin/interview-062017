@@ -45,3 +45,14 @@
 
 .top-nav__link:not(.top-nav__link--active):hover
 	transform: translateY(-1px)
+
+.nav-line
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		right: 0
+		bottom: 100%
+		left: 0
+		height: 3px
+		background-color: #ccc
