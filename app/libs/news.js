@@ -88,7 +88,7 @@ const truncate = (str, size = 50, postf = '...') => {
 };
 
 const request = new XMLHttpRequest();
-request.open('GET', '/data/news/news.json', true);
+request.open('GET', 'data/news/news.json', true);
 
 request.onload = () => {
   if (request.status >= 200 && request.status < 400) {
